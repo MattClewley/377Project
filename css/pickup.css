@@ -41,7 +41,7 @@ body{
     margin-right:auto;
     margin-left:auto;
 }
-#about-us{
+.about-us{
     font-family: sans-serif;
     background-color: #85ADCC;
 }
