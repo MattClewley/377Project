@@ -2,6 +2,9 @@ body{
     font-family: sans-serif;
     background-color: #85ADCC;
 }
+a {
+    text-decoration: none;
+}
 .home-navbar {
     display: flex;
     justify-content: center;
