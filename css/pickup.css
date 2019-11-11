@@ -63,7 +63,7 @@ a {
     align-items:center;
 }
 .nav-links {
-    width:30%;
+    width:45%;
     display:flex;
     justify-content:space-between;
     margin-left:30px;
@@ -84,4 +84,46 @@ a {
 #mapid { 
     width: 100%; 
     height: 400px;
+}
+.container {
+    width:80%;
+    margin:auto;
+}
+.center {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align:center;
+}
+.partnerOrgHolder {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.org {
+    width: 33%;
+    display:flex;
+    height:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.orgImg {
+    width:100px;
+    height:100px;
+    min-width:100px;
+}
+.vFlex {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin-left:15px;
+    width:100%;
+}
+.org p, .org a {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.page-title {
+    width:100%;
+    text-align:center;
 }
