@@ -2,15 +2,48 @@
   <head>
     <link rel="stylesheet" type="text/css" href="css/pickup.css" />
     <title>Pickup PG</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+ integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+ crossorigin=""></script>
   </head>
 <body>
-<div class="home-navbar">
-        <a href="/"><h1>Pickup PG</h1></a>
+<div class="alt-navbar">
+  <div class="nav-container"> 
+    <img class="logo" src="../images/placeholder.png">
+    <div class="nav-links">
+      <a href="/"><h3>Home</h3></a>
+      <a href="/"><h3>Get Involved</h3></a>
+      <a href="/"><h3>About Us</h3></a>
+    </div>  
+  </div>
 </div>
-
-<div class="about-body">
-    <h1>hello there</h1>
-
+<div class="twoColHolder">
+  <div class="contentHolder">
+    <h2>Where We Clean</h2>
+    <div>Four dollar toast chillwave plaid, coloring book unicorn edison bulb offal hoodie raw denim YOLO DIY. Tattooed gochujang organic bicycle rights, craft beer ethical DIY vegan neutra food truck chia. Portland try-hard craft beer polaroid mlkshk ethical truffaut twee. Hashtag viral mlkshk chambray.</div>
+    <h2>Locations and Times</h2>
+      <div>Four dollar toast chillwave plaid, coloring book unicorn edison bulb offal hoodie raw denim YOLO DIY. Tattooed gochujang organic bicycle rights, craft beer ethical DIY vegan neutra food truck chia. Portland try-hard craft beer polaroid mlkshk ethical truffaut twee. Hashtag viral mlkshk chambray.</div>
+  </div>
+  <div class="contentHolder">
+    <h2>PG County Pickups</h2>
+    <div id="mapid"></div>
+  </div>
 </div>
+<script>
+  function myFunction() {
+    var mymap = L.map('mapid').setView([38.9897, -76.9378], 11);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiY29ubm9ybWNkeGMiLCJhIjoiY2sydW5tMHkyMDFpcTNjcXJ2dnowMGc3NSJ9.j9uJ0tNMYUceEPpQez1eDw'
+}).addTo(mymap);
+  }
+  myFunction();
+</script>
 </body>
 </html>
