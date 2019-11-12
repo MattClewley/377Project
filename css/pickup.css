@@ -2,6 +2,11 @@ body{
     font-family: sans-serif;
     background-color: #85ADCC;
 }
+.home-top {
+    background-image: url("pickupmain.svg");
+    max-height: 300px;
+    width: 100%;
+}
 a {
     text-decoration: none;
 }
