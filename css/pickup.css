@@ -3,9 +3,28 @@ body{
     background-color: #85ADCC;
 }
 .home-top {
-    background-image: url("pickupmain.svg");
-    max-height: 300px;
-    width: 100%;
+    background-image: url(/images/pickupmain.svg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    height: 500px;
+    background-attachment: fixed;
+    text-align: center;
+    margin-top:10px;
+}
+.toptext{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    padding-top: 100px;
+    font-weight: bold;
+    display:block;
+    position:fixed;
+    z-index: 0;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 3px;
 }
 a {
     text-decoration: none;
@@ -20,12 +39,18 @@ a {
     color: white;
 }
 .home-body{
-    width:80%;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    width:95%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     margin-right:auto;
     margin-left:auto;
+    position: relative;
+    z-index: 1;
+    background-color: #85ADCC;;
 }
 .column{
     display:flex;
