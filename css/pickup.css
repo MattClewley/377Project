@@ -1,9 +1,10 @@
 body{
     font-family: sans-serif;
     background-color: #85ADCC;
+    margin:0px;
 }
 .home-top {
-    background-image: url(/images/pickupmain.svg) !important;
+    background-image: url(../images/pickupmain.svg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
@@ -11,6 +12,27 @@ body{
     background-attachment: fixed;
     text-align: center;
     margin-top:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.alt-top {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    height: 500px;
+    background-attachment: fixed;
+    text-align: center;
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.alt-top.where {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter2.jpg) !important;
 }
 .toptext{
     text-align: center;
@@ -103,6 +125,8 @@ a {
     justify-content: space-between;
     max-width:80%;
     margin:auto;
+    padding-top:50px;
+    padding-bottom:50px;
 }
 .contentHolder {
     display:flex;
@@ -118,6 +142,8 @@ a {
 .container {
     width:80%;
     margin:auto;
+    padding-top:50px;
+    padding-bottom:50px;
 }
 .center {
     display:flex;
