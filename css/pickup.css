@@ -34,6 +34,26 @@ body{
 .alt-top.where {
     background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter2.jpg) !important;
 }
+.alt-top-about { 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/chesapeake2.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    height: 500px;
+    background-attachment: fixed;
+    text-align: center;
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.contentHolder-img{
+    margin-right:40px;
+    margin-top:50px;
+    justify-content: center;
+    align-items: center;
+}
 .toptext{
     text-align: center;
     color: black;
