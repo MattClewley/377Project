@@ -46,8 +46,25 @@
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiY29ubm9ybWNkeGMiLCJhIjoiY2sydW5tMHkyMDFpcTNjcXJ2dnowMGc3NSJ9.j9uJ0tNMYUceEPpQez1eDw'
 }).addTo(mymap);
+    fetch('https://data.princegeorgescountymd.gov/resource/9tsa-iner.json')
+    .then(res => res.json())
+    .then(res => {
+      console.log(res); // logging step to check what we got
+      for(var i = 0; i < res.length; i++) {
+        let coord = res[i].geocoded_column;
+        //console.log(xcoord);
+        let x = coord.latitude;
+        let y = coord.longitude;
+        let marker = L.marker([y, x]).addTo(mymap);
+        console.log(marker);
+      }
+      return res;
+    })
+    
+    //var point = L.point(38.9897, -76.9378);
   }
   myFunction();
+
 </script>
 </body>
 </html>
