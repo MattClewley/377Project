@@ -133,6 +133,7 @@ a {
     width:80%;
     display:flex;
     align-items:center;
+    justify-content: space-between;
 }
 .nav-links {
     width:45%;
