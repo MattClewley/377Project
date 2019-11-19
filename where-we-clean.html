@@ -34,12 +34,17 @@
   </div>
   <div class="contentHolder">
     <h2>PG County Pickups</h2>
+    <form>
+      <select id="select">
+        <option>Select a Garbage Type</option>
+      </select>
+    </form>
     <div id="mapid"></div>
   </div>
 </div>
 <script>
   function myFunction() {
-    var mymap = L.map('mapid').setView([38.9897, -76.9378], 11);
+    var mymap = L.map('mapid').setView([38.9897, -76.9378], 9);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -50,13 +55,16 @@
     .then(res => res.json())
     .then(res => {
       console.log(res); // logging step to check what we got
+
+      // FILTERING res = res.filter(res => res.dept_id === 'INST');
       for(var i = 0; i < res.length; i++) {
         let coord = res[i].geocoded_column;
         //console.log(xcoord);
         let x = coord.latitude;
         let y = coord.longitude;
         let marker = L.marker([y, x]).addTo(mymap);
-        console.log(marker);
+        marker.bindPopup("<b>Garbage Information</b><br>Organization: "+res[i].organization + "<br/>Garbage Type: " + res[i].type_litter).openPopup();
+        //console.log(marker);
       }
       return res;
     })
