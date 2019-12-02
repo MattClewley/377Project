@@ -35,8 +35,10 @@
   <div class="contentHolder">
     <h2>PG County Pickups</h2>
     <form>
-      <select id="select">
-        <option>Select a Garbage Type</option>
+      <select id="select" onchange="filter(this.value)">
+        <option> - Select Fiscal Year - </option>
+        <option value="FY2017">2017</option>
+        <option value="FY2018">2018</option>
       </select>
     </form>
     <div id="mapid"></div>
@@ -56,11 +58,9 @@
     .then(res => {
       console.log(res);
       // FILTERING 
-      res = res.filter(res => res.fiscalyear === 'FY2017');
       console.log(res);
       for(var i = 0; i < res.length; i++) {
         let coord = res[i].geocoded_column;
-        //console.log(xcoord);
         let x = coord.latitude;
         let y = coord.longitude;
         let marker = L.marker([y, x]).addTo(mymap);
