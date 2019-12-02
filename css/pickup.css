@@ -1,5 +1,5 @@
 body{
-    font-family: sans-serif;
+    font-family:Helvetica,Verdana,sans-serif;
     background-color: #BA6EAD;
     margin:0px;
 }
@@ -30,6 +30,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction:column;
+
 }
 .alt-top.where {
     background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter2.jpg) !important;
