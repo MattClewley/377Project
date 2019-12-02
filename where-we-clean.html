@@ -54,9 +54,10 @@
     fetch('https://data.princegeorgescountymd.gov/resource/9tsa-iner.json')
     .then(res => res.json())
     .then(res => {
-      console.log(res); // logging step to check what we got
-
-      // FILTERING res = res.filter(res => res.dept_id === 'INST');
+      console.log(res);
+      // FILTERING 
+      res = res.filter(res => res.fiscalyear === 'FY2017');
+      console.log(res);
       for(var i = 0; i < res.length; i++) {
         let coord = res[i].geocoded_column;
         //console.log(xcoord);
@@ -68,8 +69,6 @@
       }
       return res;
     })
-    
-    //var point = L.point(38.9897, -76.9378);
   }
   myFunction();
 
