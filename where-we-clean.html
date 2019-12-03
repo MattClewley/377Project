@@ -9,8 +9,9 @@
  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
  crossorigin=""></script>
+ <!--<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>-->
   </head>
-<body>
+<body onload="myFunction()">
 <div class="alt-navbar">
   <div class="nav-container"> 
     <a href="index.html"><img class="logo" src="images/site_logo.png"></a>
@@ -34,8 +35,8 @@
   <div class="contentHolder">
     <h2>PG County Pickups</h2>
     <form>
-      <select id="select" onchange="filter(this.value)">
-        <option> - Select Fiscal Year - </option>
+      <select id="select" onchange="myFunction(this.value)">
+        <option value=""> - Select Fiscal Year - </option>
         <option value="FY2017">2017</option>
         <option value="FY2018">2018</option>
       </select>
@@ -44,8 +45,10 @@
   </div>
 </div>
 <script>
-  function myFunction() {
-    var mymap = L.map('mapid').setView([38.9897, -76.9378], 9);
+
+  var mymap = L.map('mapid').setView([38.9897, -76.9378], 9);
+  var layerGroup = L.layerGroup().addTo(mymap);
+  function myFunction(value) {
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -55,22 +58,27 @@
     fetch('https://data.princegeorgescountymd.gov/resource/9tsa-iner.json')
     .then(res => res.json())
     .then(res => {
-      console.log(res);
+      
+      console.log(value);
       // FILTERING 
+      layerGroup.clearLayers();
+      if(value) {
+        res = res.filter(res => res.fiscalyear === value);
+      }
       console.log(res);
       for(var i = 0; i < res.length; i++) {
         let coord = res[i].geocoded_column;
         let x = coord.latitude;
         let y = coord.longitude;
-        let marker = L.marker([y, x]).addTo(mymap);
+        let marker = L.marker([y, x]).addTo(layerGroup);
         marker.bindPopup("<b>Garbage Information</b><br>Organization: "+res[i].organization + "<br/>Garbage Type: " + res[i].type_litter).openPopup();
+        //layerGroup.addLayer(marker);
         //console.log(marker);
       }
+      //mymap.addLayer(layerGroup);
       return res;
     })
   }
-  myFunction();
-
 </script>
 </body>
 </html>
