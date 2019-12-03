@@ -1,7 +1,10 @@
 body{
     font-family:Helvetica,Verdana,sans-serif;
-    background-color: #BA6EAD;
+    background-color: #025373;
     margin:0px;
+}
+p {
+    color: white;
 }
 .home-top {
     background-image: url(../images/pickupmain.svg) !important;
@@ -11,7 +14,6 @@ body{
     height: 500px;
     background-attachment: fixed;
     text-align: center;
-    margin-top:10px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -91,14 +93,14 @@ a {
     margin: auto;
     position: relative;
     z-index: 1;
-    background-color: #18E0C1;
+    background-color: #025373;
 }
 .column{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     width:30%;
-    background-color: #FFF9E9;
+    background-color: white;
     padding: 0px 10px 0px 10px;
     align-items: center;
     transition: all .2s ease;
@@ -132,8 +134,9 @@ a {
 .alt-navbar {  
     display:flex;
     justify-content: center;
-    background-color: #BA6EAD;
+    background-color: #18E0C1;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 .logo {
     width:75px;
@@ -145,7 +148,7 @@ a {
     display:flex;
     align-items:center;
     justify-content: space-between;
-    background-color: #BA6EAD;
+    background-color: #18E0C1;
 }
 .nav-links {
     width:45%;
@@ -160,7 +163,7 @@ a {
     margin:auto;
     padding-top:50px;
     padding-bottom:50px;
-    background-color: #FFF9E9;
+    /*background-color: #FFF9E9;*/
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -220,7 +223,7 @@ a {
     text-align:center;
 }
 .nav-links a{
-    color: #FFF9E9;
+    color: black;
 }
 
 /* media queries */
