@@ -3,6 +3,13 @@ body{
     background-color: #025373;
     margin:0px;
 }
+h1 {
+    text-shadow: 2px 2px white;
+    color: #005372;
+}
+.herosubtitle {
+    text-shadow: 1px 1px white;
+}
 p {
     color: white;
 }
