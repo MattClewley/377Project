@@ -15,8 +15,14 @@ h1 {
 p {
     color: white;
 }
+.org a {
+    color: #18E0C1;
+}
+.org a:hover {
+    color: black;
+}
 .home-top {
-    background-image: url(../images/pickupmain.svg) !important;
+    background-image: url(/src/static/images/pickupmain.svg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
@@ -38,9 +44,9 @@ p {
             flex-direction:column;
 }
 .alt-top {
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(../images/litter.jpg) !important;
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter.jpg) !important;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter.jpg) !important;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/src/static/images/litter.jpg) !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter.jpg) !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter.jpg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
@@ -63,14 +69,14 @@ p {
 
 }
 .alt-top.where {
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(../images/litter2.jpg) !important;
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter2.jpg) !important;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/litter2.jpg) !important;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/src/static/images/litter2.jpg) !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter2.jpg) !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter2.jpg) !important;
 }
 .alt-top-about { 
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(../images/chesapeake2.jpg) !important; 
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/chesapeake2.jpg) !important; 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(../images/chesapeake2.jpg) !important;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/src/static/images/chesapeake2.jpg) !important; 
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/chesapeake2.jpg) !important; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/chesapeake2.jpg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
@@ -390,10 +396,20 @@ a {
     .alt-top {
         background-attachment: unset;
     }
+    .partnerOrgHolder {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .org {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) {
-
+    .partnerOrgHolder {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media screen and (max-width: 479px) {
