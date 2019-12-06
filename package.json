@@ -1,1 +1,23 @@
-
+{
+  "name": "377Project",
+  "description": "INST377 Litter Group Project",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.X"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattClewley/377Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattClewley/377Project/issues"
+  },
+  "homepage": "https://github.com/MattClewley/377Project/src/index.html"
+}
