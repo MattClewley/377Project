@@ -3,7 +3,7 @@
   "description": "INST377 Litter Group Project",
   "version": "1.0.0",
   "engines": {
-    "node": "12.13.1"
+    "node": "12.X"
   },
   "main": "index.js",
   "directories": {
