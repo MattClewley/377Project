@@ -1,4 +1,5 @@
-npm start
+//npm start
+"start": "node ./index.js"
 {
   "name": "377Project",
   "description": "INST377 Litter Group Project",
