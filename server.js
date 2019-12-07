@@ -42,25 +42,61 @@ app.use(express.static('public'));
 // this is, right now, an introduction to Callback Hell
 // but it is okay for a first-level example
 app.get('/api', (req, res) => {
-  const baseURL = 'https://api.umd.io/v0/courses/list';
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/9tsa-iner.json';
   fetch(baseURL)
-    .then((r) => r.json())
-    .then((data) => {
-      data = data.filter(data => data.dept_id === 'INST');
-      //var map = new Map();
-      var array = {};
-      for(let i = 0; i < data.length; i++) {
-        array[data[i].course_id] = data[i].name
-        //map.set(data[i].course_id, data[i].name);
-      }
-      //var myjson = JSON.stringify(array);
-      res.send({ array });
-      console.log(array);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.redirect('/error');
+    .then((res) => res.json())
+    .then(res => {
+        console.log(value);
+        // FILTERING 
+        layerGroup.clearLayers();
+        if(value) {
+          res = res.filter(res => res.fiscalyear === value);
+        }
+        //mymap.addLayer(layerGroup);
+        //return res;
+        res.send(res);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.redirect('/error');
+      });
     });
-});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+
+
+/*var mymap = L.map('mapid').setView([38.9897, -76.9378], 9);
+var layerGroup = L.layerGroup().addTo(mymap);
+function myFunction(value) {
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  id: 'mapbox.streets',
+  accessToken: 'pk.eyJ1IjoiY29ubm9ybWNkeGMiLCJhIjoiY2sydW5tMHkyMDFpcTNjcXJ2dnowMGc3NSJ9.j9uJ0tNMYUceEPpQez1eDw'
+}).addTo(mymap);
+  fetch('https://data.princegeorgescountymd.gov/resource/9tsa-iner.json')
+  .then(res => res.json())
+  .then(res => {
+    
+    console.log(value);
+    // FILTERING 
+    layerGroup.clearLayers();
+    if(value) {
+      res = res.filter(res => res.fiscalyear === value);
+    }
+    console.log(res);
+    for(var i = 0; i < res.length; i++) {
+      let coord = res[i].geocoded_column;
+      let x = coord.latitude;
+      let y = coord.longitude;
+      let marker = L.marker([y, x]).addTo(layerGroup);
+      marker.bindPopup("<b>Garbage Information</b><br>Organization: "+res[i].organization + "<br/>Garbage Type: " + res[i].type_litter).openPopup();
+      //layerGroup.addLayer(marker);
+      //console.log(marker);
+    }
+    //mymap.addLayer(layerGroup);
+    return res;
+  })
+}*/
