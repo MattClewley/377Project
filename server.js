@@ -44,18 +44,22 @@ app.use(express.static('public'));
 app.get('/api', (req, res) => {
   const baseURL = 'https://data.princegeorgescountymd.gov/resource/9tsa-iner.json';
   fetch(baseURL)
-    .then((res) => res.json())
-    .then(res => {
+    .then((r) => r.json())
+    .then(data => {
         console.log(value);
         // FILTERING 
-        layerGroup.clearLayers();
+        /*layerGroup.clearLayers();
         if(value) {
           res = res.filter(res => res.fiscalyear === value);
-        }
+        }*/
         //mymap.addLayer(layerGroup);
         //return res;
-        res.send(res);
-        console.log(res);
+        //data = data.filter((data) => data.fiscalyear=== 'FY2017');
+        const array = {};
+        for (let i = 0; i < data.length; i+=1) {
+          array[data[i].longitude] = data[i].latitude;
+        }
+        res.send({ array });
       })
       .catch((err) => {
         console.log(err);

@@ -55,28 +55,28 @@
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiY29ubm9ybWNkeGMiLCJhIjoiY2sydW5tMHkyMDFpcTNjcXJ2dnowMGc3NSJ9.j9uJ0tNMYUceEPpQez1eDw'
 }).addTo(mymap);
+  console.log('fetch');
     fetch('/api')
     .then(res => res.json())
     .then(res => {
       //console.log(value);
       // FILTERING 
-      /*layerGroup.clearLayers();
+      layerGroup.clearLayers();
       if(value) {
         res = res.filter(res => res.fiscalyear === value);
-      }*/
-      //console.log(res);
-      for(var i = 0; i < res.length; i++) {
-        let coord = res[i].geocoded_column;
-        let x = coord.latitude;
-        let y = coord.longitude;
-        let marker = L.marker([y, x]).addTo(layerGroup);
-        marker.bindPopup("<b>Garbage Information</b><br>Organization: "+res[i].organization + "<br/>Garbage Type: " + res[i].type_litter).openPopup();
-        //layerGroup.addLayer(marker);
-        //console.log(marker);
       }
-      //mymap.addLayer(layerGroup);
-      return res;
-    })
+      let codes = document.querySelector(".emptyclass");
+      //console.log(res);
+      for(var i in res){
+              for(const [key, val] of Object.entries(res[i])){
+                //let looped = document.getElementsByClassName("content"); 
+                let x = val; 
+                let y = key; 
+                let marker = L.marker([y, x]).addTo(layerGroup);
+                marker.bindPopup("<b>Garbage Information</b><br>Organization: "+res[i].organization + "<br/>Garbage Type: " + res[i].type_litter).openPopup();
+        }
+        return res;
+    }
   }
 </script>
 </body>
