@@ -1,23 +1,31 @@
 {
-  "name": "377Project",
-  "description": "INST377 Litter Group Project",
-  "version": "1.0.0",
-  "engines": {
-    "node": "12.13.1"
-  },
-  "main": "index.js",
+  "name": "PickupPG",
+  "version": "1.0",
+  "description": "Package.json",
+  "main": "server.js",
   "directories": {
     "doc": "docs"
   },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "node-fetch":"^2.6.0",
+    "express":"^4.17.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MattClewley/377Project.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Node"
+  ],
+  "author": "Idk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MattClewley/377Project/issues"
