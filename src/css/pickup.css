@@ -366,6 +366,10 @@ a {
 .nav-links a:hover{
     color: white;
 }
+.loctime {
+    background-color: white;
+    color: black;
+}
 
 /* media queries */
 @media screen and (max-width: 991px) {
