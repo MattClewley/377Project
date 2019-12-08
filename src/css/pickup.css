@@ -367,8 +367,10 @@ a {
     color: white;
 }
 .loctime {
-    background-color: white;
-    color: black;
+    padding: 10px;
+}
+.loctime p {
+    color: #18E0C1;
 }
 
 /* media queries */

@@ -89,7 +89,7 @@
             let garb = res[i].type_litter;
             //let neworg = org.replace(/([A-Z])/g, ' $1').trim()
             let newgarb = garb.replace(/_/g, " ");
-            let final = org + "<br />" +  newgarb;
+            let final = "<p>" + "Organization name: " + org + "</p>" + "<br />" + "<p>" + "Litter type: " + newgarb + "</p>";
             return final;
           }
         }
