@@ -46,7 +46,7 @@ app.get('/api', (req, res) => {
   fetch(baseURL)
     .then((res) => res.json())
     .then(data => {
-        console.log(data);
+        //console.log(data);
         // FILTERING 
         /*layerGroup.clearLayers();
         if(value) {
@@ -56,9 +56,11 @@ app.get('/api', (req, res) => {
         //return res;
         //data = data.filter((data) => data.fiscalyear=== 'FY2017');
         const array = {};
-        for (let i = 0; i < data.length; i+=1) {
-          array[data[i].longitude] = data[i].latitude;
+        for (let i = 0; i < data.length; i++) {
+          //array.push(data[i]);
         }
+        
+        console.log(array);
         res.send({ data });
       })
       .catch((err) => {
