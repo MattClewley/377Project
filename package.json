@@ -1,0 +1,31 @@
+{
+  "name": "express",
+  "version": "4.17.1",
+  "description": "Node fetch",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattClewley/377Project.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Idk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattClewley/377Project/issues"
+  },
+  "homepage": "https://github.com/MattClewley/377Project#readme"
+}
