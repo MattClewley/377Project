@@ -35,7 +35,7 @@ app.use(express.json());
  *  - Express: app.use()
  *    https://expressjs.com/en/4x/api.html#app.use
  */
-app.use(express.static('public'));
+app.use(express.static('src'));
 
 // this is a single route, in the simplest possible format
 // the simplest format is not necessarily the best one.
@@ -44,9 +44,9 @@ app.use(express.static('public'));
 app.get('/api', (req, res) => {
   const baseURL = 'https://data.princegeorgescountymd.gov/resource/9tsa-iner.json';
   fetch(baseURL)
-    .then((r) => r.json())
+    .then((res) => res.json())
     .then(data => {
-        console.log(value);
+        console.log(data);
         // FILTERING 
         /*layerGroup.clearLayers();
         if(value) {
@@ -59,7 +59,7 @@ app.get('/api', (req, res) => {
         for (let i = 0; i < data.length; i+=1) {
           array[data[i].longitude] = data[i].latitude;
         }
-        res.send({ array });
+        res.send({ data });
       })
       .catch((err) => {
         console.log(err);
