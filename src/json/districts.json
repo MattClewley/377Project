@@ -1,0 +1,136 @@
+[
+  {
+    "district_id": "1",
+    "towns": [
+      "Adelphi", 
+      "Beltsville", 
+      "Calverton", 
+      "College Park", 
+      "Laurel", 
+      "Montpelier", 
+      "South Laurel", 
+      "Vansville",
+      "West Laurel"
+    ]
+  },
+  {
+    "district_id": "2",
+    "towns": [
+      "Adelphi", 
+      "Avondale",
+      "Brentwood", 
+      "Carole Highlands", 
+      "Chillum", 
+      "Green Meadows", 
+      "Hyattsville", 
+      "Langley Park", 
+      "Lewisdale", 
+      "Mount Rainier",
+      "North Brentwood"
+    ]
+  },
+  {
+    "district_id": "3",
+    "towns": [
+      "Beacon Heights", 
+      "Berwyn Heights", 
+      "College Park", 
+      "East Pines", 
+      "Glenn Dale", 
+      "Glenridge", 
+      "Landover Hills", 
+      "Lanham", 
+      "New Carrollton", 
+      "Riverdale Heights and Hills", 
+      "Riverdale Park", 
+      "Seabrook", 
+      "Templeton Knolls", 
+      "University Park", 
+      "West Lanham Hills",
+      "Woodlawn"
+    ]
+  },
+  {
+    "district_id": "4",
+    "towns": [
+      "Bowie", 
+      "Glenn Dale", 
+      "Greenbelt", 
+      "Westchester Park",
+      "Upper Marlboro"
+    ]
+  },
+  {
+    "district_id": "5",
+    "towns": [
+      "Bladensburg", 
+      "Cheverly", 
+      "Edmonston", 
+      "Fairmount Heights", 
+      "Glenarden", 
+      "Landover", 
+      "Colmar Manor", 
+      "Cottage City", 
+      "Springdale", 
+      "Bowie", 
+      "Lanham", 
+      "Hyattsville",
+      "Landover Hills"
+    ]
+  },
+  {
+    "district_id": "6",
+    "towns": [
+      "South Bowie", 
+      "Capitol Heights", 
+      "District Heights", 
+      "Forestville", 
+      "Kettering", 
+      "Largo", 
+      "Mitchellville",
+      "Upper Marlboro"
+    ]
+  },
+  {
+    "district_id": "7",
+    "towns": [
+      "District Heights", 
+      "Bradbury/Boulevard Heights", 
+      "Capitol Heights", 
+      "Hillcrest Heights", 
+      "Marlow Heights", 
+      "Seat Pleasant", 
+      "Suitland",
+      "Morningside"
+    ]
+  },
+  {
+    "district_id": "8",
+    "towns": [
+      "Camp Springs", 
+      "Andrews Air Force Base", 
+      "Clinton", 
+      "Forest Heights", 
+      "Fort Washington", 
+      "Glass Manor", 
+      "Marlow Heights", 
+      "Oxon Hill",
+      "Temple Hills" 
+    ]
+  },
+  {
+    "district_id": "9",
+    "towns": [
+      "Accokeek", 
+      "Aquasco", 
+      "Baden", 
+      "Brandywine", 
+      "Cheltenham", 
+      "Clinton", 
+      "Eagle Harbor", 
+      "Fort Washington", 
+      "Piscataway",
+      "Upper Marlboro"
+    ]
+  }
+]
