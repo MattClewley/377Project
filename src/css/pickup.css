@@ -22,7 +22,7 @@ p {
     color: black;
 }
 .home-top {
-    background-image: url(/src/static/images/pickupmain.svg) !important;
+    background-image: url(/static/images/pickupmain.svg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
@@ -44,9 +44,9 @@ p {
             flex-direction:column;
 }
 .alt-top {
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/src/static/images/litter.jpg) !important;
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter.jpg) !important;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter.jpg) !important;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/static/images/litter.jpg) !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/litter.jpg) !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/litter.jpg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
@@ -69,14 +69,14 @@ p {
 
 }
 .alt-top.where {
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/src/static/images/litter2.jpg) !important;
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter2.jpg) !important;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/litter2.jpg) !important;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/static/images/litter2.jpg) !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/litter2.jpg) !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/litter2.jpg) !important;
 }
 .alt-top-about { 
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/src/static/images/chesapeake2.jpg) !important; 
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/chesapeake2.jpg) !important; 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/src/static/images/chesapeake2.jpg) !important;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/static/images/chesapeake2.jpg) !important; 
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/chesapeake2.jpg) !important; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/chesapeake2.jpg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
