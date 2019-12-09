@@ -120,7 +120,7 @@ p {
             flex-direction:column;
 
 }
-.contentHolder-imgdoc {
+.contentHolder-imgdoc img{
     border-radius: 20%;
 }
 .alt-top.where {
