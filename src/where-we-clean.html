@@ -56,7 +56,7 @@
             <option value="FY2018">2018</option>
           </select>
           <select class="filter" name="district" id="district" onchange="pinPoints(this.value)">
-            <option value=""> - Select District - </option>
+            <option value=""> - Select Council District - </option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -67,11 +67,18 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <a class="button" id="exlink" href="https://www.princegeorgescountymd.gov/DocumentCenter/View/20717/Countywide-Council-District-Map" target="_blank">
-            <div id="first">What district am I in?</div>
-            <div id="second">Link to map of districts --></div>
-          </a>
+          
         </form>
+        <div class="flex-holder" style="text-align:center;">
+            <a class="button" id="exlink" href="https://www.princegeorgescountymd.gov/DocumentCenter/View/20717/Countywide-Council-District-Map" target="_blank">
+              <div id="first">What district am I in?</div>
+              <div id="second">Link to map of districts --></div>
+            </a>
+            <a class="button" id="exlink" href="#" onclick="location.reload();" >
+              <div>Reset Filter Options</div>
+            </a>
+        </div>
+        
         <div id="mapid" class="emptyclass"></div>
       </div>
     </div>
