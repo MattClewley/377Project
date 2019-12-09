@@ -100,7 +100,16 @@ p {
 .contentHolder-img{
     margin-right:40px;
     margin-top:50px;
-    margin-bottom:150px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+.contentHolder-img2{
+    margin-right:40px;
+    margin-top:50px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
