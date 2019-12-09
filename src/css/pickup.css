@@ -21,6 +21,58 @@ p {
 .org a:hover {
     color: black;
 }
+#filterform {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    color: #000;
+    transition:all 800ms;
+    border-radius: 5px;
+    border:none;
+    font-size: 13px;
+    font-weight: 400;
+    position:relative;
+    overflow:hidden;
+    width:25%;
+    min-width:150px;
+    height: 15px;
+    margin: 10px;
+}
+.button:hover {
+    border-radius:0px;
+}
+#exlink {
+    display:flex;
+}
+.button div{
+    position:absolute;
+    transition: all 500ms ease;
+    width:100%;
+    text-align:center;
+}
+.filter {
+    padding:10px;
+    border:none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    color: #000;
+    transition: all 500ms;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.filter:hover {
+    border-radius:0px;
+}
 .home-top {
     background-image: url(/static/images/pickupmain.svg) !important;
     background-size: cover;

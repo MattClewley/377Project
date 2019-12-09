@@ -67,11 +67,27 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
+          <a class="button" id="exlink" href="https://www.princegeorgescountymd.gov/DocumentCenter/View/20717/Countywide-Council-District-Map" target="_blank">
+            <div id="first">What district am I in?</div>
+            <div id="second">Link to map of districts --></div>
+          </a>
         </form>
         <div id="mapid" class="emptyclass"></div>
       </div>
     </div>
     <script>
+      document.getElementById("second").style.left = "1000px";
+      var exlink = document.getElementById("exlink").onmouseover = function() 
+      {
+        document.getElementById("first").style.left = "1000px";
+        document.getElementById("second").style.left = "0px";
+      }
+      var exlink2 = document.getElementById("exlink").onmouseout = function() 
+      {
+        document.getElementById("first").style.left = "0px";
+        document.getElementById("second").style.left = "1000px";
+      }
+
       var form = document.getElementById("filterform");
       var mymap = L.map("mapid").setView([38.9897, -76.9378], 9);
       var layerGroup = L.layerGroup().addTo(mymap);
