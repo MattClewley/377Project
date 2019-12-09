@@ -120,6 +120,9 @@ p {
             flex-direction:column;
 
 }
+.contentHolder-imgdoc {
+    border-radius: 20%;
+}
 .alt-top.where {
     background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/static/images/litter2.jpg) !important;
     background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/litter2.jpg) !important;
