@@ -135,6 +135,9 @@ p {
             flex-direction:column;
 
 }
+.contentHolder-imgdoc img{
+    border-radius: 20%;
+}
 .alt-top.where {
     background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/static/images/litter2.jpg) !important;
     background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/litter2.jpg) !important;
@@ -144,6 +147,30 @@ p {
     background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/static/images/chesapeake2.jpg) !important; 
     background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/chesapeake2.jpg) !important; 
     background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/chesapeake2.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    height: 500px;
+    background-attachment: fixed;
+    text-align: center;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+}
+.alt-top-doc { 
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.5)),to(rgba(255,255,255,0.5))),url(/static/images/sailboat-img.jpg) !important; 
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/sailboat-img.jpg) !important; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255,255,255,0.5)),url(/static/images/sailboat-img.jpg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
@@ -320,7 +347,7 @@ a {
     background-color: #18E0C1;
 }
 .nav-links {
-    width:45%;
+    width:60%;
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
