@@ -30,7 +30,7 @@
   <div class="contentHolder">
     <p>Together, with the help of local government and community sponsors Prince George's County has continued to strive for a cleaner and more sustainable environment. Here, you can see where previous clean-up events have been held, as well as where future clean-up are going to be taking place.</p>
     <h2>Locations and Times</h2>
-    <p class="popthis">Click a pinpoint on the map to replace me!</p>
+    <div class="popthis"><p>Click a pinpoint on the map to replace me!</p></div>
   </div>
   <div class="contentHolder">
     <h2>PG County Pickups</h2>
@@ -84,12 +84,12 @@
           let y = coord.longitude;
           console.log(y);
           console.log(keylat);
-          if(y == keylat){
+          if(y == keylat && x == keylong){
             let org = res[i].organization;
             let garb = res[i].type_litter;
             //let neworg = org.replace(/([A-Z])/g, ' $1').trim()
             let newgarb = garb.replace(/_/g, " ");
-            let final = "<p>" + "Organization name: " + org + "</p>" + "<br />" + "<p>" + "Litter type: " + newgarb + "</p>";
+            let final = "<p>" + "Organization name: " + org + "</p>" + "<p>" + "Litter type: " + newgarb + "</p>";
             return final;
           }
         }

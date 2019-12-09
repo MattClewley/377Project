@@ -372,7 +372,16 @@ a {
     padding: 10px;
 }
 .loctime p {
-    color: #18E0C1;
+    color: black;
+}
+.popthis {
+    width: 100%;
+    background-color: #18E0C1;
+    text-align: center;
+}
+.popthis p{
+    color: black;
+    padding: 10px;
 }
 
 /* media queries */
