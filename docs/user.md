@@ -1,1 +1,11 @@
-THIS IS OUR USER MANUAL
+**User Manual**
+
+We created Pickup PG as a way to connect residents of Prince George's County to various clean-up efforts around the community. We saw an opportunity to optimize the current Prince George's County trash collection volunteer system, with an all-in-one site that provides users with both opportunities to easily view current and future clean-ups as well as connect with community clean-up sponsors. 
+
+Our site takes data from the Prince George's County website about organizations trash collection volunteering and allows a user to be able to look at a map and see past clean-ups and where they occurred on the page after clicking the link "Where We Clean" from our Home page or the navigation bar at the top of the page. These points can be filtered by year. Each data point also shows the organization that hosted the volunteer and what kind of environmental cleaning was done be it garbage pickup or planting trees. These points are shown when you hover over those points and clicking the map point you want lets you see the specific location on the side of the map in the middle of the page under "Location and Times". 
+
+If you want to be involved, check out the "Get Involved" Page from our Home page or the navigation bar at the top of the page. Here 6 active organizations in the Prince George's Community are listed with their logos. Clicking on the names of the organizations takes you to their about pages and clicking on the number listed will call that organization. 
+
+If you want to learn more about us and our mission as well as about how to use this site in the way we explained, you can go to the "About Us" page from our Home page or the navigation bar at the top of the page..
+
+By including these aspects, we have made it easy to connect with volunteer opportunities that you may want to be involved in and connecting with those organizations. Our pleasant design and impactful background images and description of the problems in the about page hopefully urge you to want to help out. By having a map that shows locations and the organizations there, you will be able to see clean-up organizations and what kinds of cleaning is happening close to you in this very large county. After those organizations are revealed to you, our site allows you to be able to research them and contact them with ease so that you may get involved.
