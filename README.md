@@ -1,8 +1,16 @@
-#Pickup PG
+**Pickup PG**
 
 INST 377 Final Group Project: Trash Collection in PG County
 
-Optimized Browsers: Google Chrome or Mozilla Firefox
+#Description of Project#
+
+Our project is dedicated to introduce an interactive website to assist in helping decrease the carbon footprint in Prince George's County.
+
+Littering costs Americans over $11 billion annually and wreaks havoc on streets, forests, and the environment globally. In PG County alone, thousands of clean up efforts go unnoticed due to a lack of a proper network and central hub for sharing data relevant to this cause.
+
+Our aim is to introduce an interactive website to be able to: offer visibility to the local community as to where clean-ups are occurring, aid with transparency, informing the community of who is conducting these clean-ups, and how one can get involved
+
+Our Target Browsers: Google Chrome, Mozilla Firefox, iOS, Android, *INSERT MORE*
 
 Heroku Page: https://pickuppg.herokuapp.com/index.html
 
