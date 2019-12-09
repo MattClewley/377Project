@@ -4,7 +4,7 @@ INST 377 Final Group Project: Trash Collection in PG County
 
 Optimized Browsers: Google Chrome or Mozilla Firefox
 
-Heroku Page: *Link to Heroku Page*
+Heroku Page: https://pickuppg.herokuapp.com/index.html
 User Manual: /377Project/docs/user.md
 Developer Manual: /377Project/README.md
 
