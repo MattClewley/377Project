@@ -430,7 +430,7 @@ a {
     margin-bottom:30px;
 }
 .orgImg {
-    width:100px;
+    width:auto;
     height:100px;
     min-width:100px;
 }
@@ -520,6 +520,12 @@ a {
     .partnerOrgHolder {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .twoColHolder {
+        flex-direction:column-reverse;
+    }
+    .contentHolder {
+        width:100%;
     }
 }
 
