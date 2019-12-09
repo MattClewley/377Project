@@ -19,4 +19,5 @@ For our technology stack, we chose to use Leaflet for our website's map as menti
 **Technical system decision rationale**
 
 Our final system, when implemented in a live setting will succeed in providing an improved information to residents of Prince George's County regarding clean up events held in their community. Using the PG County API, our website can provide accurate, up-to-date information to those interested in getting involved with a good cause.
+
 Further development for our website would be to continue to improve the CSS and overall cleanliness of our page. Additionally, our dataset contains data on cleanups that have mostly happened in the past. Ideally with more time we would like to reach out to the organizations already partnered with PG County to gain access to information on their future efforts. With time, we would like to increase the scalability of our website so that if we want to pitch our platform to other counties in Maryland, the transition would be as simple as inserting a dataset for that county.
