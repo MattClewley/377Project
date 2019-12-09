@@ -10,7 +10,9 @@ Littering costs Americans over $11 billion annually and wreaks havoc on streets,
 
 Our aim is to introduce an interactive website to be able to: offer visibility to the local community as to where clean-ups are occurring, aid with transparency, informing the community of who is conducting these clean-ups, and how one can get involved
 
-Our Target Browsers: Google Chrome, Mozilla Firefox, iOS, Android, *INSERT MORE*
+Our Target Browsers: Google Chrome, Mozilla Firefox, Internet Explorer, iOS and Safari, Android.
+
+We wanted to target the three main web browsers for PC and the two main web browsers for Smart Phones. We want most people in the United States, if not all, to be able to access this site. More specifically, everyone in Prince George's County. All 5 work properly and exceptionally well.
 
 Heroku Page: https://pickuppg.herokuapp.com/index.html
 
@@ -31,7 +33,3 @@ In order to get started with operating out website, first clone our files from o
 Known Bugs:
 -Leaflet map on "Where we Clean" will sometimes be slow to load and time out the page. 
 -Images in index.html and about.html will sometimes not load onto the page when the site is run on Heroku. 
-
-
-
-
