@@ -106,6 +106,7 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+}
 
 .contentHolder-img2{
     margin-right:40px;
