@@ -1,6 +1,6 @@
 **INST 377 Final Project**
 
-**Pickup PG: Connor McDonald, Matt Clewley, Robert Moran, Awais Sheikh, Andrew Loredo
+**Pickup PG: Connor McDonald, Matt Clewley, Robert Moran, Awais Sheikh, Andrew Loredo**
 
 Heroku Link: https://pickuppg.herokuapp.com/index.html
 
