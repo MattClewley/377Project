@@ -2,111 +2,155 @@
   <head>
     <link rel="stylesheet" type="text/css" href="css/pickup.css" />
     <title>Pickup PG</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
- integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
- crossorigin=""></script>
- <!--<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>-->
+    <script
+      src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""
+    ></script>
+    <!--<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>-->
   </head>
-<body>
-  <div class="alt-navbar">
-    <div class="nav-container"> 
-        <a href="/index.html"><img class="logo" src="/static/images/site_logo.png"></a>
+  <body>
+    <div class="alt-navbar">
+      <div class="nav-container">
+        <a href="/index.html"
+          ><img class="logo" src="/static/images/site_logo.png"
+        /></a>
         <div class="nav-links">
           <a href="/index.html"><h3>Home</h3></a>
           <a href="/get-involved.html"><h3>Get Involved</h3></a>
           <a href="/where-we-clean.html"><h3>Where We Clean</h3></a>
           <a href="/about-us.html"><h3>About Us</h3></a>
-      </div>  
+        </div>
+      </div>
     </div>
-  </div>
-<div class="alt-top where">
-  <h1 class="herotitle">Where We Clean</h1>
-</div>
-<div class="twoColHolder">
-  <div class="contentHolder">
-    <p>Together, with the help of local government and community sponsors Prince George's County has continued to strive for a cleaner and more sustainable environment. Here, you can see where previous clean-up events have been held, as well as where future clean-up are going to be taking place.</p>
-    <h2>Locations and Times</h2>
-    <div class="popthis"><p>Click a pinpoint on the map to replace me!</p></div>
-  </div>
-  <div class="contentHolder">
-    <h2>PG County Pickups</h2>
-    <form>
-      <select id="select" onchange="myFunction(this.value)">
-        <option value=""> - Select Fiscal Year - </option>
-        <option value="FY2017">2017</option>
-        <option value="FY2018">2018</option>
-      </select>
-    </form>
-    <div id="mapid" class="emptyclass"></div>
-  </div>
-</div>
-<script>
-
-  var mymap = L.map('mapid').setView([38.9897, -76.9378], 9);
-  var layerGroup = L.layerGroup().addTo(mymap);
-  function myFunction(value) {
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoiY29ubm9ybWNkeGMiLCJhIjoiY2sydW5tMHkyMDFpcTNjcXJ2dnowMGc3NSJ9.j9uJ0tNMYUceEPpQez1eDw'
-}).addTo(mymap);
-    fetch('/api')
-    .then(res => res.json())
-    .then(res => {
-      res = res.data;
-      console.log(value);
-      // FILTERING 
-      layerGroup.clearLayers();
-      console.log(res);
-      for(var i = 0; i < res.length; i++) {
-        let coord = res[i].geocoded_column;
-        let x = coord.latitude;
-        let y = coord.longitude;
-        let marker = L.marker([y, x]).addTo(layerGroup).on('click', function(e) {
-          let timez = document.querySelector(".popthis");
-          timez.innerHTML = '';
-          let keylat = e.latlng.lat;
-          let keylong = e.latlng.lng;
-          let test = funtimes(keylong, keylat);
-          timez.innerHTML = "<div class='loctime'>" + test + "</div>";
-        });
-        marker.bindPopup("<b>Garbage Information</b><br>Organization: "+ res[i].organization + "<br/>Garbage Type: " + res[i].type_litter).openPopup();
-      }
-      function funtimes(keylong, keylat) {
-        for(var i = 0; i < res.length; i++) {
-          let coord = res[i].geocoded_column;
-          let x = coord.latitude;
-          let y = coord.longitude;
-          console.log(y);
-          console.log(keylat);
-          if(y == keylat && x == keylong){
-            let org = res[i].organization;
-            let garb = res[i].type_litter;
-            //let neworg = org.replace(/([A-Z])/g, ' $1').trim()
-            let newgarb = garb.replace(/_/g, " ");
-            let final = "<p>" + "Organization name: " + org + "</p>" + "<p>" + "Litter type: " + newgarb + "</p>";
-            return final;
-          }
+    <div class="alt-top where">
+      <h1 class="herotitle">Where We Clean</h1>
+    </div>
+    <div class="twoColHolder">
+      <div class="contentHolder">
+        <p>
+          Together, with the help of local government and community sponsors
+          Prince George's County has continued to strive for a cleaner and more
+          sustainable environment. Here, you can see where previous clean-up
+          events have been held, as well as where future clean-up are going to
+          be taking place.
+        </p>
+        <h2>Locations and Times</h2>
+        <div class="popthis">
+          <p>Click a pinpoint on the map to replace me!</p>
+        </div>
+      </div>
+      <div class="contentHolder">
+        <h2>PG County Pickups</h2>
+        <form id="filterform">
+          <select class="filter" name="year" id="year" onchange="pinPoints(this.value)">
+            <option value=""> - Select Fiscal Year - </option>
+            <option value="FY2017">2017</option>
+            <option value="FY2018">2018</option>
+          </select>
+          <select class="filter" name="district" id="district" onchange="pinPoints(this.value)">
+            <option value=""> - Select District - </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </form>
+        <div id="mapid" class="emptyclass"></div>
+      </div>
+    </div>
+    <script>
+      var form = document.getElementById("filterform");
+      var mymap = L.map("mapid").setView([38.9897, -76.9378], 9);
+      var layerGroup = L.layerGroup().addTo(mymap);
+      L.tileLayer(
+        "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+        {
+          attribution:
+            'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 18,
+          id: "mapbox.streets",
+          accessToken:
+            "pk.eyJ1IjoiY29ubm9ybWNkeGMiLCJhIjoiY2sydW5tMHkyMDFpcTNjcXJ2dnowMGc3NSJ9.j9uJ0tNMYUceEPpQez1eDw"
         }
+      ).addTo(mymap);
+      function pinPoints(value) {
+        let request = "/api/" + value;
+        let formyear = document.getElementById("year").value;
+        let formdis = document.getElementById("district").value;
+        if(formyear !== "" && formdis !== "") {
+          request = "/api/year/" + formyear + "/district/" + formdis;
+          console.log(request);
+        }
+        fetch(request)
+          .then(res => res.json())
+          .then(res => {
+            res = res.data;
+            console.log(value);
+            layerGroup.clearLayers();
+            console.log(res);
+            for (var i = 0; i < res.length; i++) {
+              let coord = res[i].geocoded_column;
+              let x = coord.latitude;
+              let y = coord.longitude;
+              let marker = L.marker([y, x])
+                .addTo(layerGroup)
+                .on("click", function(e) {
+                  let timez = document.querySelector(".popthis");
+                  timez.innerHTML = "";
+                  let keylat = e.latlng.lat;
+                  let keylong = e.latlng.lng;
+                  let test = funtimes(keylong, keylat);
+                  timez.innerHTML = "<div class='loctime'>" + test + "</div>";
+                });
+              marker
+                .bindPopup(
+                  "<b>Garbage Information</b><br>Organization: " +
+                    res[i].organization +
+                    "<br/>Garbage Type: " +
+                    res[i].type_litter
+                )
+                .openPopup();
+            }
+            function funtimes(keylong, keylat) {
+              for (var i = 0; i < res.length; i++) {
+                let coord = res[i].geocoded_column;
+                let x = coord.latitude;
+                let y = coord.longitude;
+                console.log(y);
+                console.log(keylat);
+                if (y == keylat && x == keylong) {
+                  let org = res[i].organization;
+                  let garb = res[i].type_litter;
+                  let district = res[i].council_district;
+                  let newgarb = garb.replace(/_/g, " ");
+                  let final =
+                    "<p>Organization name: " +
+                    org +
+                    "</p><p>Litter type: " +
+                    newgarb +
+                    "</p><p>Disctrict: " +
+                    district +
+                    "</p>";
+                  return final;
+                }
+              }
+            }
+            return res;
+          });
       }
-      //mymap.addLayer(layerGroup);
-      return res;
-      //return newp;
-    })
-    /*let newp = document.createElement('p');
-    let timez = document.querySelector(".popthis");
-    timez.innerHTML = '';
-    let key = res[i].organization;
-    let keytext = document.createTextNode(key);
-    newp.appendChild(keytext);
-    return newp;*/
-  }
-</script>
-</body>
+    </script>
+  </body>
 </html>
-
