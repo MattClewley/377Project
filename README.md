@@ -14,7 +14,7 @@ Our Target Browsers: Google Chrome, Mozilla Firefox, Microsoft Edge, iOS and Saf
 
 We wanted to target the three main web browsers for PC and the two main web browsers for Smart Phones. We want most people in the United States, if not all, to be able to access this site. More specifically, everyone in Prince George's County. All 5 work properly and exceptionally well.
 
-Heroku Page: https://pickuppg.herokuapp.com/index.html
+Heroku Page: https://pickuppg.herokuapp.com/
 
 User Manual: /377Project/docs/user.md
 
