@@ -31,9 +31,13 @@ Installation Instructions:
 
 Welcome to Pickup PG, the all in one solution to connecting residents of Prince George’s County to organized community clean-up efforts. 
 
-In order to get started with operating out website, first clone our files from our GitHub page at *Insert Link*. Additionally, you should be sure to check that our dataset API is still being supported and is available at https://data.princegeorgescountymd.gov/Environment/LitterTRAK/9tsa-iner.
+In order to get started with operating out website, first clone our files from our GitHub page at https://github.com/MattClewley/377Project. Additionally, you should be sure to check that our dataset API is still being supported and is available at https://data.princegeorgescountymd.gov/Environment/LitterTRAK/9tsa-iner.
 
 
 Known Bugs:
 -Leaflet map on "Where we Clean" will sometimes be slow to load and time out the page. 
 -Images in index.html and about.html will sometimes not load onto the page when the site is run on Heroku. 
+Future Work:
+-Have map cover more counties in Maryland or possibly even East Coast states. 
+-More filter options
+-Connecting the Organizations Contact information when you select the organization pickup from the leaflet map pinpoints. 
