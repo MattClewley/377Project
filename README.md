@@ -33,6 +33,7 @@ Welcome to Pickup PG, the all in one solution to connecting residents of Prince 
 
 In order to get started with operating out website, first clone our files from our GitHub page at https://github.com/MattClewley/377Project. Additionally, you should be sure to check that our dataset API is still being supported and is available at https://data.princegeorgescountymd.gov/Environment/LitterTRAK/9tsa-iner.
 
+To run our application on a server make sure you have node js downloaded on your local computer. Navigate to the clone directory in your terminal (example would be: cd /Users/yourusername/foldername/GitHub/377Project) and then run node server.js in order to start your server on a port (typically 5000). Then load up the application in your preferred browser by navigating to localhost:5000 and you should see the site.
 
 Known Bugs:
 -Leaflet map on "Where we Clean" will sometimes be slow to load and time out the page. 
